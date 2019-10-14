@@ -9,20 +9,9 @@
 */
 
 
-let teachers = [
+const teachers = [
 	{
 		name: 'Ashley',
-		topicArea: 'Javascript'
-	}
-];
-
-let newTeachers = [
-	{
-		name: 'James',
-		topicArea: 'Javascript'
-	},
-	{
-		name: 'Treasure',
 		topicArea: 'Javascript'
 	}
 ];
@@ -34,13 +23,13 @@ const courses = ['Introducing JavaScript',
 				'JavaScript and the DOM',
 				'DOM Scripting By Example'];
 
-//var i = courses.length;
+var i = courses.length;
 
 
 
 function addNewTeachers(newTeachers) {
 	// TODO: write a function that adds new teachers to the teachers array 
-  teachers = teachers.concat(newTeachers);
+  teachers.push(...newTeachers);
 }
 
 
@@ -51,9 +40,19 @@ function printTreehouseSummary() {
 	 console.log(`${teachers[i].name} teaches ${teachers[i].topicArea}`);
 	}
 	
-  console.log(`Treehouse has ${courses.length} JavaScript courses, and ${teachers.length} Javascript teachers`);
+  console.log(`Treehouse has ${i} JavaScript courses, and ${teachers.length} Javascript teachers`);
 }
 
+let newTeachers = [
+	{
+		name: 'James',
+		topicArea: 'Javascript'
+	},
+	{
+		name: 'Treasure',
+		topicArea: 'Javascript'
+	}
+];
 
 addNewTeachers(newTeachers);
 printTreehouseSummary();
